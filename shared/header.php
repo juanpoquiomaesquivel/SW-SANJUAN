@@ -13,7 +13,7 @@ class HeaderSanjuan
             </ul>
 
             <ul>
-                <li><a class="header_dir" href="../view/viewProductos.php">Productos</a></li>
+                <li><a class="header_dir" href="../controller/getProductos.php">Productos</a></li>
                 <li>X</li>
                 <li>Y</li>
                 <li>Z</li>

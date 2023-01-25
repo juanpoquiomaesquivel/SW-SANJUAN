@@ -12,7 +12,7 @@ class ConexionBD
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_EMULATE_PREPARES => false
         ];
-        $pdo = new PDO($connection, "root", "", $options);
+        $pdo = new PDO($connection, "root", "admin", $options);
         $this->conexion = $pdo;
     }
 

@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+    font-size: 18px;
+}
+
+:root {
+    --negro: #000000;
+    --blanco: #FFFFFF;
+    --fondo: #0d83a3;
+}
+
+#logo {
+    height: 60px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+#header-sanjuan {
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: white;
+    background: var(--fondo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+#header-sanjuan>ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 25px;
+}

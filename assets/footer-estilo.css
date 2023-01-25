@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --negro: #000000;
+    --blanco: #FFFFFF;
+}
+
+footer {
+    background: var(--negro);
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    font-size: 1.5rem;
+    color: var(--blanco);
+    margin-top: .3rem;
+}

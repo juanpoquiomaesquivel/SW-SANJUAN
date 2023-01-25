@@ -7,18 +7,11 @@ class FooterSanjuan
     private function __construct()
     {
 ?>
-        <div id="header-sanjuan">
-            <ul>
-                <li>A</li>
-            </ul>
-
-            <ul>
-                <li>B</li>
-                <li>C</li>
-                <li>D</li>
-                <li>E</li>
-            </ul>
-        </div>
+        <footer>
+            <span>Juan Poquioma Esquivel © <script>
+                    document.write(new Date().getFullYear());
+                </script> Todos los derechos reservados</span>
+        </footer>
 
 <?php
     }

@@ -25,7 +25,7 @@ class ControllerProductos
         $mod = new ModelProductos();
         $arr_articulos = $mod->listarArticulos();
         $arr_categorias = $mod->listarFiltrosCategoria();
-        $arr_productos = $mod->listarFiltrosProducto(0);
+        $arr_productos = [];
         include_once("../view/viewProductos.php");
         $form = new ViewProductos();
         $form->showViewProductos($arr_articulos, $arr_categorias, $arr_productos, 0, 0);

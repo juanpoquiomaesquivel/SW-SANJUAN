@@ -54,12 +54,12 @@ class ViewProductos
                         <br>
                         <h3>Producto</h3>
                         <select name="index_producto" id="index_producto" class="input_select">
-                            <option value="0">Todos</option>
+                            <option value="0" disabled selected>Todos</option>
                             <?php
                             foreach ($arr_productos as $producto) {
                             ?>
-                                <option value="<?php echo $producto['id'] ?>" <?php if ($producto["id"] == $index_producto) echo 'selected="selected"'; ?>>
-                                    <?php echo $producto['nombre'] ?>
+                                <option value="<?= $producto['id'] ?>" <?php if ($producto["id"] == $index_producto) echo 'selected="selected"'; ?>>
+                                    <?= $producto['nombre'] ?>
                                 </option>
                             <?php
                             }
@@ -104,7 +104,7 @@ class ViewProductos
                 $("#index_categoria").change(function() {
                     var x = $("#index_categoria").val();
                     xmlhttp = new XMLHttpRequest();
-                    xmlhttp.open("GET", "../controller/getProds.php?items=" + x, false);
+                    xmlhttp.open("GET", "../controller/getProductos.php?items=" + x, false);
                     xmlhttp.send(null);
                     $("#index_producto").html(xmlhttp.responseText);
                 });

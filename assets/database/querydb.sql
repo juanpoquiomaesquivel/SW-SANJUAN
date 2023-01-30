@@ -335,10 +335,24 @@ insert into
     articulo (nombre, cantidad, precio, imagen, id_producto)
 values
     (
-        'Aceite Vegetal "Happy Belly"',
+        'Aceite esencial de Arroz Salvado 500 ml- 100% puro',
         5,
-        10.5,
-        "https://images-na.ssl-images-amazon.com/images/I/71jxqrLs6aL._AC_UL600_SR600,400_.jpg",
+        11.81,
+        "https://m.media-amazon.com/images/I/71Ii8EaC23L._AC_UL320_.jpg",
+        1
+    ),
+    (
+        'La Chinata Aceite Oliva Virgen Extra Guindilla - 250 ml',
+        12,
+        13.25,
+        "https://m.media-amazon.com/images/I/515T20eBdJL._AC_UL320_.jpg",
+        1
+    ),
+    (
+        'Finca La Barca Aceite 500 Ml',
+        7,
+        12.95,
+        "https://m.media-amazon.com/images/I/71nIJS2IuSL._AC_UL320_.jpg",
         1
     );
 
@@ -346,9 +360,73 @@ insert into
     articulo (nombre, cantidad, precio, imagen, id_producto)
 values
     (
-        'Arroz "Sello Rojo" 3kg',
+        'Kraft aderezo',
         4,
-        4.70,
-        "https://m.media-amazon.com/images/I/51cAkfz2f-L._SX300_SY300_QL70_FMwebp_.jpg",
+        2.52,
+        "https://images-na.ssl-images-amazon.com/images/I/71-S52XzqnL._AC_UL600_SR600,400_.jpg",
+        2
+    ),
+    (
+        'Kewpie Vestido de sésamo tostado profundo (16.9 onzas)',
+        5,
+        10.31,
+        "https://images-na.ssl-images-amazon.com/images/I/510EwNVdLoL._AC_UL600_SR600,400_.jpg",
+        2
+    ),
+    (
+        'Wish-Bone - Aderezo italiano',
+        13,
+        2.28,
+        "https://images-na.ssl-images-amazon.com/images/I/81Ri0BJY+wL._AC_UL600_SR600,400_.jpg",
+        2
+    );
+
+insert into
+    articulo (nombre, cantidad, precio, imagen, id_producto)
+values
+    (
+        'Nishiki - Arroz de grano medio, 240 onzas, paquete de 1',
+        11,
+        20.19,
+        "https://images-na.ssl-images-amazon.com/images/I/91a3Kp2SP7L._AC_UL600_SR600,400_.jpg",
         3
+    ),
+    (
+        'Botan Arroz Calrose Musenmai, 5 libras',
+        3,
+        7.99,
+        "https://images-na.ssl-images-amazon.com/images/I/716AiHWmMdL._AC_UL600_SR600,400_.jpg",
+        3
+    ),
+    (
+        'Royal Basmati - arroz en bolsa plástico',
+        2,
+        15.59,
+        "https://images-na.ssl-images-amazon.com/images/I/71kjSKjRHxL._AC_UL600_SR600,400_.jpg",
+        3
+    );
+
+insert into
+    articulo (nombre, cantidad, precio, imagen, id_producto)
+values
+    (
+        'Byzantine Mezcla de oliva deshuesada, país, 5 libras',
+        5,
+        13.5,
+        "https://m.media-amazon.com/images/I/91GZjDPGZbL._AC_UL320_.jpg",
+        35
+    ),
+    (
+        'Mario Camacho Foods - Aceitunas mediterráneas de kalamata en rodajas, 7 onzas',
+        7,
+        11.93,
+        "https://m.media-amazon.com/images/I/71p8v10z3cL._AC_UL320_.jpg",
+        35
+    ),
+    (
+        'Mario Camacho Foods Manzanilla rellena de Pimiento, 7.0 onzas líquidas',
+        12,
+        8.44,
+        "https://m.media-amazon.com/images/I/717kA75hLcL._AC_UL320_.jpg",
+        35
     );

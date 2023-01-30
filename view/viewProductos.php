@@ -4,7 +4,6 @@ include_once("../shared/footer.php");
 
 class ViewProductos
 {
-
     public function showViewProductos($arr_articulos, $arr_categorias, $arr_productos, $index_categoria, $index_producto)
     {
 ?>
@@ -26,8 +25,10 @@ class ViewProductos
             <?php HeaderSanjuan::obtenerInstancia(); ?>
 
             <div class="buscador">
-                <form method="POST" action="getProductos.php">
+                <form method="POST" action="../controller/getProductos.php">
                     <input type="text" name="termino_clave" autocomplete="off">
+                    <input type="text" name="indexB_categoria" value="<?= $index_categoria ?>" hidden="true">
+                    <input type="text" name="indexB_producto" value="<?= $index_producto ?>" hidden="true">
                     <input type="submit" value="Buscar" name="buscar">
                 </form>
             </div>
@@ -54,7 +55,7 @@ class ViewProductos
                         <br>
                         <h3>Producto</h3>
                         <select name="index_producto" id="index_producto" class="input_select">
-                            <option value="0" disabled selected>Todos</option>
+                            <option value="0">Todos</option>
                             <?php
                             foreach ($arr_productos as $producto) {
                             ?>
@@ -70,8 +71,8 @@ class ViewProductos
                         <input type="submit" value="Aplicar filtros" name="filtrar">
                     </form>
                 </nav>
-                <div class="productos">
-                    <h1>Productos</h1>
+                <div class="articulos">
+                    <h1>Artículos</h1>
                     <section class="contenedor_articulos">
                         <?php for ($i = 0; $i < count($arr_articulos); $i++) {
                         ?>

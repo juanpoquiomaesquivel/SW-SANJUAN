@@ -5,8 +5,8 @@ class ModelProductos
 {
     function listarFiltrosCategoria()
     {
-        $conexion = ConexionBD::obtenerInstancia()->conexion;
-        $query = $conexion->query("select * from categoria");
+        $conn = ConexionBD::obtenerInstancia()->conexion;
+        $query = $conn->query("select * from categoria");
         $filtros_categoria = $query->fetchAll(PDO::FETCH_ASSOC);
 
         return $filtros_categoria;
@@ -25,13 +25,14 @@ class ModelProductos
             return [];
     }
 
-    function listarArticulosPorFiltros($index_categoria, $index_producto)
+    function listarArticulosPorFiltros($termino, $index_categoria, $index_producto)
     {
         echo "ix-cat: " . $index_categoria . "; ix-pro: " . $index_producto . "/";
         $conn = ConexionBD::obtenerInstancia()->conexion;
         $categoria = ($index_categoria != 0) ? " and categoria.id = ?" : "";
         $producto = ($index_producto != 0) ? " and producto.id = ?" : "";
-        $sql = "select articulo.id, articulo.nombre, articulo.cantidad, articulo.precio, articulo.imagen, producto.nombre as prod_nombre, categoria.nombre as cat_nombre from articulo join producto on articulo.id_producto = producto.id" . $producto . " join categoria on producto.id_categoria = categoria.id" . $categoria;
+        $articulo = ($termino != null) ? " and articulo.nombre like ?" : "";
+        $sql = "select articulo.id, articulo.nombre, articulo.cantidad, articulo.precio, articulo.imagen, producto.nombre as prod_nombre, categoria.nombre as cat_nombre from articulo join producto on articulo.id_producto = producto.id" . $producto . " join categoria on producto.id_categoria = categoria.id" . $categoria . $articulo;
         $stmt = $conn->prepare($sql);
         $params = [];
 
@@ -40,6 +41,9 @@ class ModelProductos
 
         if ($index_categoria != 0)
             array_push($params, $index_categoria);
+        
+        if ($termino != null)
+            array_push($params, "%" . $termino . "%");
 
         $stmt->execute($params);
         $arr_articulos = $stmt->fetchAll(PDO::FETCH_ASSOC);

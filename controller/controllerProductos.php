@@ -2,11 +2,12 @@
 
 class ControllerProductos
 {
-    function listarArticulosPorFiltros($index_categoria, $index_producto)
+
+    function listarArticulosPorFiltros($termino, $index_categoria, $index_producto)
     {
         include_once("../model/modelProductos.php");
         $mod = new ModelProductos();
-        $arr_articulos = $mod->listarArticulosPorFiltros($index_categoria, $index_producto);
+        $arr_articulos = $mod->listarArticulosPorFiltros($termino, $index_categoria, $index_producto);
 
         if (count($arr_articulos) == 0) {
             echo "No hay artículos...";

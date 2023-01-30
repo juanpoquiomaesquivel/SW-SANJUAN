@@ -2,11 +2,15 @@
 include_once("controllerProductos.php");
 
 if (isset($_POST["buscar"])) {
-    $term = $_POST["termino_clave"];
+    echo "BUSCARS...";
+    $termino = $_POST["termino_clave"];
+    $index_categoria = $_POST["indexB_categoria"];
+    $index_producto = $_POST["indexB_producto"];
 
-    if (!preg_match("/^\s*$/", $term)) {
+    if (!preg_match("/^\s*$/", $termino)) {
+        include_once("controllerProductos.php");
         $con = new ControllerProductos();
-        $con->listarArticulos($term, null, null);
+        $con->listarArticulosPorFiltros($termino, $index_categoria, $index_producto);
     }
 } else if (isset($_POST["filtrar"])) {
     echo "FILTROS...";
@@ -14,10 +18,10 @@ if (isset($_POST["buscar"])) {
     $index_producto = $_POST["index_producto"];
     include_once("controllerProductos.php");
     $con = new ControllerProductos();
-    $con->listarArticulosPorFiltros($index_categoria, $index_producto);
+    $con->listarArticulosPorFiltros(null, $index_categoria, $index_producto);
 } else if (isset($_GET["items"])) {
 ?>
-    <option value="0" disabled selected>Todos</option>
+    <option value="0">Todos</option>
     <?php
     require_once("../shared/conexionbd.php");
 

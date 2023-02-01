@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-html {
-    font-size: 18px;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 :root {
     --negro: #000000;
     --blanco: #FFFFFF;
-    --fondo: #0d83a3;
+    --fondo: #ff933b;
+    --fuente: 'Quicksand'
 }
 
 #logo {
-    height: 60px;
+    height: 8rem;
 }
 
 * {
@@ -19,12 +16,13 @@ html {
     margin: 0;
     text-decoration: none;
     box-sizing: border-box;
+    font-family: var(--fuente), 'sans-serif';
 }
 
 #header-sanjuan {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
     color: white;
+    font-family: var(--fuente), sans-serif;
+    font-weight: lighter;
     background: var(--fondo);
     display: flex;
     justify-content: space-between;
@@ -37,4 +35,9 @@ html {
     list-style: none;
     align-items: center;
     gap: 25px;
+}
+
+.header-dir {
+    color: var(--negro);
+    font-size: 1.25rem;
 }

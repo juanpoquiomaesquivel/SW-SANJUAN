@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-:root {
-    --negro: #000000;
-    --blanco: #FFFFFF;
-}
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
 footer {
-    background: var(--negro);
+    background: var(--fondo);
     display: flex;
     justify-content: center;
     padding: 3rem 1rem;

@@ -1,7 +1,7 @@
 <?php
 include_once("../shared/conexionbd.php");
 
-class ModelProductos
+class ModelArticulos
 {
     function listarFiltrosCategoria()
     {

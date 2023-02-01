@@ -2,9 +2,9 @@
 include_once("../shared/header.php");
 include_once("../shared/footer.php");
 
-class ViewProductos
+class ViewArticulos
 {
-    public function showViewProductos($arr_articulos, $arr_categorias, $arr_productos, $index_categoria, $index_producto)
+    public function showViewArticulos($arr_articulos, $arr_categorias, $arr_productos, $index_categoria, $index_producto)
     {
 ?>
 
@@ -25,7 +25,7 @@ class ViewProductos
             <?php HeaderSanjuan::obtenerInstancia(); ?>
 
             <div class="buscador">
-                <form method="POST" action="../controller/getProductos.php">
+                <form method="POST" action="../controller/getArticulos.php">
                     <input type="text" name="termino_clave" autocomplete="off">
                     <input type="text" name="indexB_categoria" value="<?= $index_categoria ?>" hidden="true">
                     <input type="text" name="indexB_producto" value="<?= $index_producto ?>" hidden="true">
@@ -34,7 +34,7 @@ class ViewProductos
             </div>
             <div class="contenedor_body">
                 <nav class="barra_filtros">
-                    <form class="filtros" method="POST" action="../controller/getProductos.php">
+                    <form class="filtros" method="POST" action="../controller/getArticulos.php">
                         <h2>Filtros</h2>
 
                         <br>
@@ -105,7 +105,7 @@ class ViewProductos
                 $("#index_categoria").change(function() {
                     var x = $("#index_categoria").val();
                     xmlhttp = new XMLHttpRequest();
-                    xmlhttp.open("GET", "../controller/getProductos.php?items=" + x, false);
+                    xmlhttp.open("GET", "../controller/getArticulos.php?items=" + x, false);
                     xmlhttp.send(null);
                     $("#index_producto").html(xmlhttp.responseText);
                 });
